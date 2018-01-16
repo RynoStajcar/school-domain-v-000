@@ -16,5 +16,7 @@ class School
   end
 
   # this method should arrange the students in each grade by alphabetical order
-
+  def sort
+    @roster.collect {|student| student.sort}
+  end
 end
