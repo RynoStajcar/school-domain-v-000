@@ -1,13 +1,20 @@
 class School
+  attr_accessor :name, :roster
 
-  attr_accessor :roster
+  def initialize(name)
+    @name = name
+    @roster = {}
+  end
 
-  def add_student(student_name, grade)
-      roster[grade] ||= []
-      roster[grade] << student_name
+  def add_student(name, grade)
+    roster[grade] ||= []
+    roster[grade] << name
+  end
 
-    def add_student(name, grade)
-      @roster << name[grade]
-    end
+  def grade(grade)
+    roster[grade]
+  end
+
+  # this method should arrange the students in each grade by alphabetical order
 
 end
