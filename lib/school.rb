@@ -12,11 +12,11 @@ class School
   end
 
   def grade(grade)
-    roster[grade]
+    @roster[grade]
   end
 
   # this method should arrange the students in each grade by alphabetical order
   def sort
-    @roster.collect {|student| student.sort}
+    @roster.each {|student| student.sort}
   end
 end
