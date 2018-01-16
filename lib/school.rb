@@ -17,8 +17,6 @@ class School
 
   # this method should arrange the students in each grade by alphabetical order
   def sort
-    sorted = []
-    @roster.each {|student| sorted << student.sort}
-    sorted
+    @roster.each {|student| student.sort}
   end
 end
